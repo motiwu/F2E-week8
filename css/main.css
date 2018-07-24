@@ -1,0 +1,191 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, D:/git/F2E-week8/css/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, D:/git/F2E-week8/css/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 31, D:/git/F2E-week8/css/_reset.scss */
+html {
+  font-family: 'Roboto', sans-serif; }
+
+/* line 34, D:/git/F2E-week8/css/_reset.scss */
+body {
+  line-height: 1; }
+
+/* line 37, D:/git/F2E-week8/css/_reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 40, D:/git/F2E-week8/css/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 43, D:/git/F2E-week8/css/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 48, D:/git/F2E-week8/css/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 7, D:/git/F2E-week8/css/_config.scss */
+h2 {
+  font-size: 64px;
+  font-weight: 700; }
+
+/* line 11, D:/git/F2E-week8/css/_config.scss */
+h3 {
+  font-size: 36px;
+  font-weight: 700; }
+
+/* line 15, D:/git/F2E-week8/css/_config.scss */
+h4 {
+  font-size: 24px; }
+
+/* line 18, D:/git/F2E-week8/css/_config.scss */
+p {
+  font-size: 20px; }
+
+/* line 8, D:/git/F2E-week8/css/main.scss */
+body {
+  min-height: 100vh; }
+
+/* line 11, D:/git/F2E-week8/css/main.scss */
+.ch {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+/* line 18, D:/git/F2E-week8/css/main.scss */
+.ch-1 {
+  text-align: center;
+  background: #1469FF; }
+  /* line 21, D:/git/F2E-week8/css/main.scss */
+  .ch-1:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%; }
+  /* line 28, D:/git/F2E-week8/css/main.scss */
+  .ch-1 .rect-1 {
+    position: absolute;
+    left: calc(50% - 220px);
+    top: calc(50% - 220px);
+    width: 440px;
+    height: 440px;
+    fill: #000000; }
+  /* line 36, D:/git/F2E-week8/css/main.scss */
+  .ch-1 .circle-1 {
+    position: absolute;
+    left: calc(50% - 270px);
+    top: calc(50% - 270px);
+    width: 540px;
+    height: 540px;
+    fill: #0027C8; }
+  /* line 44, D:/git/F2E-week8/css/main.scss */
+  .ch-1 .triangles {
+    position: absolute;
+    left: 50%;
+    top: 50%; }
+  /* line 49, D:/git/F2E-week8/css/main.scss */
+  .ch-1 .triangle-1,
+  .ch-1 .triangle-2 {
+    position: absolute;
+    width: 365px;
+    height: 365px;
+    fill: #FF3C82;
+    transform: translate(-50%, -43%); }
+  /* line 57, D:/git/F2E-week8/css/main.scss */
+  .ch-1 .triangle-2 {
+    transform: translate(-50%, -57%) rotate(180deg); }
+  /* line 60, D:/git/F2E-week8/css/main.scss */
+  .ch-1 .text {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: middle;
+    color: #ffffff; }
+  /* line 70, D:/git/F2E-week8/css/main.scss */
+  .ch-1.state-1 .rect-1 {
+    animation: turn 5s reverse cubic-bezier(0.57, 0, 1, 1); }
+  /* line 73, D:/git/F2E-week8/css/main.scss */
+  .ch-1.state-1 .circle-1 {
+    animation: scale 5s; }
+  /* line 76, D:/git/F2E-week8/css/main.scss */
+  .ch-1.state-1 .triangles {
+    animation: turn 5s; }
+  /* line 81, D:/git/F2E-week8/css/main.scss */
+  .ch-1.state-2 .rect-1 {
+    animation: cover 1.4s forwards; }
+  /* line 84, D:/git/F2E-week8/css/main.scss */
+  .ch-1.state-2 .circle-1 {
+    animation: cover 1.4s .15s forwards; }
+  /* line 87, D:/git/F2E-week8/css/main.scss */
+  .ch-1.state-2 .triangles {
+    animation: cover 1.4s .3s forwards; }
+  /* line 90, D:/git/F2E-week8/css/main.scss */
+  .ch-1.state-2 .triangle-1,
+  .ch-1.state-2 .triangle-2 {
+    animation: discolor 1s .8s linear forwards; }
+  /* line 94, D:/git/F2E-week8/css/main.scss */
+  .ch-1.state-2 .text {
+    animation: fade 1.5s 1.5s forwards; }
+
+@keyframes turn {
+  to {
+    transform: rotate(1turn); } }
+
+@keyframes scale {
+  0%, 100% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.13); } }
+
+@keyframes cover {
+  to {
+    transform: scale(10); } }
+
+@keyframes discolor {
+  0% {
+    fill: #FF3C82; }
+  60% {
+    fill: #0027C8; }
+  100% {
+    fill: #1469FF; } }
+
+@keyframes fade {
+  to {
+    opacity: 0; } }
+
+/*# sourceMappingURL=main.css.map */

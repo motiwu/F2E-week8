@@ -1,0 +1,138 @@
+@import 'reset';
+@import 'config';
+
+//.container {
+//    position: relative;
+//    min-width: 1024px;
+//}
+body {
+    min-height: 100vh;
+}
+.ch {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.ch-1 {
+    text-align: center;
+    background: $blue;
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        height: 100%;
+    }
+    .rect-1 {
+        position: absolute;
+        left: calc(50% - 220px);
+        top: calc(50% - 220px);
+        width: 440px;
+        height: 440px;
+        fill: $black;
+    }
+    .circle-1 {
+        position: absolute;
+        left: calc(50% - 270px);
+        top: calc(50% - 270px);
+        width: 540px;
+        height: 540px;
+        fill: $purple;
+    }
+    .triangles {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
+    .triangle-1,
+    .triangle-2 {
+        position: absolute;
+        width: 365px;
+        height: 365px;
+        fill: $pink;
+        transform: translate(-50%, -43%);
+    }
+    .triangle-2 {
+        transform: translate(-50%, -57%) rotate(180deg)
+    }
+    .text {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        vertical-align: middle;
+        color: $white;
+    }
+    
+    &.state {
+        &-1 {
+            .rect-1 {
+                animation: turn 5s reverse cubic-bezier(.57, 0, 1, 1);
+            }
+            .circle-1 {
+                animation: scale 5s;
+            }
+            .triangles {
+                animation: turn 5s;
+            }
+        }
+        &-2 {
+            .rect-1 {
+                animation: cover 1.4s forwards;
+            }
+            .circle-1 {
+                animation: cover 1.4s .15s forwards;
+            }
+            .triangles {
+                animation: cover 1.4s .3s forwards;
+            }
+            .triangle-1,
+            .triangle-2 {
+                animation: discolor 1s .8s linear forwards;
+            }
+            .text {
+                animation: fade 1.5s 1.5s forwards;
+            }
+        }
+    }
+}
+
+@keyframes turn {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.13);
+    }
+}
+
+@keyframes cover {
+    to {
+        transform: scale(10);
+    }
+}
+
+@keyframes discolor {
+    0% {
+        fill: $pink;
+    }
+    60% {
+        fill: $purple;
+    }
+    100% {
+        fill: $blue;
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
